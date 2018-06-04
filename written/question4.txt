@@ -1,0 +1,8 @@
+Question 4. The GloVe and word2vec libraries provide pre-trained word embeddings for dimensions from 50 - 300. In an NLP application task what are the trade-offs of using word embeddings of smaller vs larger dimensions? (5 points)
+
+Word2Vec is used to project words in vector space as word embeddings. Glove (Global Vectors) is, in effect, an extension of Word2Vec.
+
+The trade-off of using embeddings of different dimensions, is between a number of things. Firstly, the more dimensions we use, the more computation power (and time) is required to train the model. Secondly, higher dimensionality typically gives better quality of the embeddings. One interpretation is that at 50, quality is typically low, whereas over 300 it usually doesn’t increase in a significant manner (hence the interval mentioned in the assignment).  
+
+The dimensions of word2vec don’t have a clear meaning and as such it is hard to say what features are lost or gained as the dimensions change. Overall, less dimensions mean more general and less accurate embeddings, whereas more dimensions give more specific and accurate embeddings. While accuracy might seem like an elusive concept in this context, the developer of word2vec, Thomas Mikolov, used about 9,000 semantic and 10,000 syntactic relations to produce a benchmark test of the accuracy of the model.
+
